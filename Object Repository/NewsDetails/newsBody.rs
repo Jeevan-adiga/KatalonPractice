@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//h1[@id='link-21b71713']/span[2]</value>
+         <value>//*[contains(@name,'articleBody')]//div[contains(@class,'StoryBodyCompanionColumn')]</value>
       </entry>
       <entry>
          <key>BASIC</key>

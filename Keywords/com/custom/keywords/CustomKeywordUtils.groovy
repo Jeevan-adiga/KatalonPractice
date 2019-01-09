@@ -79,7 +79,7 @@ class CustomKeywordUtils {
 	@Keyword
 	def clickElement(WebElement element) {
 		try {
-			KeywordUtil.logInfo("Clicking element")
+			KeywordUtil.logInfo("Clicking element:"+element.toString())
 			element.click()
 			KeywordUtil.markPassed("Element has been clicked")
 		} catch (WebElementNotFoundException e) {
@@ -88,7 +88,7 @@ class CustomKeywordUtils {
 			KeywordUtil.markFailed("Fail to click on element")
 		}
 	}
-	
+
 	/**
 	 * Get all rows of HTML table
 	 * @param table Katalon test object represent for HTML table

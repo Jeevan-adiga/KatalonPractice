@@ -14,29 +14,5 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('https://www.nytimes.com/')
-
-WebUI.waitForJQueryLoad(120)
-
-allInternalLinks = CustomKeywords.'com.custom.keywords.CustomKeywordUtils.getWebElements'('//a[contains(@href,\'nytimes.com\') and contains(@href,\'pgtype\')]')
-
-WebUI.waitForPageLoad(120)
-
-for (int i = 0; i < 10; i++) {
-    WebUI.waitForPageLoad(120)
-
-    WebUI.waitForElementVisible(findTestObject('HomePage/homePageBanner'), 30)
-
-    CustomKeywords.'com.custom.keywords.CustomKeywordUtils.clickElement'(allInternalLinks.get(i))
-
-    WebUI.waitForElementVisible(findTestObject('NewsDetails/newsHeader'), 120)
-
-    newsBody = WebUI.getText(findTestObject('NewsDetails/newsBody'))
-
-    newsHeader = WebUI.getText(findTestObject('NewsDetails/newsHeader'))
-
-    WebUI.click(findTestObject('NewsDetails/logo'))
-}
-
-WebUI.closeBrowser()
+WebUI.openBrowser('')
 
